@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- ********************** Multiple Vue instances ****************************** -->
+    <h1>Multiple Vue Instances</h1>
+
+    <div id="vue-app-one">
+        <h2>Vue app one</h2>
+        <greeting></greeting>        
+            
+    </div>
+
+    <div id="vue-app-two">
+        <h2>Vue app two</h2>        
+        <greeting></greeting>
+        
+    </div>
+
+
+    <!-- ********************** Refs   ******************************************* -->
+    <div id="vue-app-refs">
+        <h1>Refs</h1>    
+        <input type="text" ref="anotherRefInput"/>
+        <input type="text" ref="anotherRefInput2"/>                
+        <button v-on:click="readRefs">Submit</button>  
+
+        <input type="text" ref="input"/>            
+        <button v-on:click="readRefs">Submit</button>                
+        <p>Your favourite food: {{ output }} </p>
+
+        <div ref="testDivRef">hello</div>
+                      
+    </div>
+    
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
